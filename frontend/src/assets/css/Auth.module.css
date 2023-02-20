@@ -1,0 +1,19 @@
+.authWrapper {
+    @apply bg-blue-600 h-screen flex items-center justify-center
+}
+
+.label {
+    @apply flex flex-col gap-1 mb-6
+}
+
+.caption {
+    @apply font-medium
+}
+
+.input {
+    @apply border-2 border-neutral-200 p-2 hover:border-blue-600 transition-colors duration-500
+}
+
+.submit {
+    @apply cursor-pointer hover:bg-blue-600 border-blue-600 border-2 text-blue-600 p-3 w-full text-center hover:text-white transition duration-500 font-medium
+}

@@ -1,0 +1,14 @@
+{
+  "trailingComma": "none",
+  "tabWidth": 4,
+  "useTabs": true,
+  "semi": true,
+  "singleQuote": false,
+  "arrowParens": "avoid",
+  "importOrder": [
+    "^../(.*)",
+    "^./(.*)"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

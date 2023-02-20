@@ -1,0 +1,3 @@
+.title {
+    @apply text-2xl uppercase font-bold mb-6
+}
