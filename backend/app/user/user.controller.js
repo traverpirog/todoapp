@@ -42,7 +42,6 @@ export const login = asyncErrorHandler(async (req, res) => {
 	});
 	if (!user) res.status(404).json({ message: "User not found" });
 	const unhashedPassword = await verify(user.password, password);
-	console.log(unhashedPassword);
 	if (!unhashedPassword)
 		res.status(401).json({ message: "Password incorrect" });
 	const token = generateToken(user.id);
