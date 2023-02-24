@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import cors from 'cors'
 import express from "express";
 
 import { prisma } from "./app/prisma.js";
@@ -13,6 +14,7 @@ const app = express();
 
 const start = async () => {
 	if (process.env.NODE_ENV) app.use(morgan("dev"));
+	app.use(cors());
 	app.use(express.json());
 
 	app.use("/api/users", userRouter);
