@@ -22,8 +22,8 @@ export const register = asyncErrorHandler(async (req, res) => {
 			password: await hash(password),
 			todos: {
 				create: {
-					title: todos.title,
-					description: todos.description
+					title: todos.title || "",
+					description: todos.description || ""
 				}
 			}
 		}
