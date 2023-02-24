@@ -2,29 +2,16 @@ import { NavLink } from "react-router-dom";
 
 import classes from "../assets/css/Auth.module.css";
 import Title from "../components/ui/Title.jsx";
+import Input from '../components/ui/Input.jsx'
 
-const Auth = () => {
+const Login = () => {
 	return (
 		<div className={classes.authWrapper}>
 			<div className="bg-white p-7">
-				<Title>Authorization</Title>
+				<Title>Enter your details</Title>
 				<form className="mb-3" onSubmit={e => e.preventDefault()}>
-					<label className={classes.label}>
-						<span className={classes.caption}>Login:</span>
-						<input
-							className={classes.input}
-							type="text"
-							placeholder="Ivan"
-						/>
-					</label>
-					<label className={classes.label}>
-						<span className={classes.caption}>Password:</span>
-						<input
-							className={classes.input}
-							type="password"
-							placeholder="********"
-						/>
-					</label>
+					<Input caption="Login" type="text" placeholder="Ivan" />
+					<Input caption="Password" type="password" placeholder="********" />
 					<input
 						className={classes.submit}
 						type="submit"
@@ -47,4 +34,4 @@ const Auth = () => {
 	);
 };
 
-export default Auth;
+export default Login;

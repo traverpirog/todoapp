@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Auth from "./pages/Auth.jsx";
+import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 
 const App = () => {
@@ -10,10 +10,10 @@ const App = () => {
 		<BrowserRouter>
 			<Routes>
 				{isAuth ? (
-					<Route path={"/"} element={<Auth />} />
+					<Route path={"/"} element={<Login />} />
 				) : (
 					<>
-						<Route path={"/"} element={<Auth />} />
+						<Route path={"/"} element={<Login />} />
 						<Route path={"/register"} element={<Register />} />
 					</>
 				)}
