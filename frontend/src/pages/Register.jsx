@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import classes from "../assets/css/Auth.module.css";
@@ -7,9 +7,9 @@ import Input from "../components/ui/Input.jsx";
 import Title from "../components/ui/Title.jsx";
 
 const Register = () => {
-	const [email, setEmail] = useState('');
-	const [login, setLogin] = useState('');
-	const [password, setPassword] = useState('');
+	const [email, setEmail] = useState("");
+	const [login, setLogin] = useState("");
+	const [password, setPassword] = useState("");
 	function register() {
 		axios({
 			method: "POST",
@@ -17,15 +17,19 @@ const Register = () => {
 			data: {
 				email,
 				login,
-				password
+				password,
+				todos: {
+					title: "First todo",
+					content: "Todo content"
+				}
 			}
 		}).then(res => console.log(res));
 	}
 
 	const getFormData = e => {
 		e.preventDefault();
-		register()
-	}
+		register();
+	};
 
 	return (
 		<div className={classes.authWrapper}>

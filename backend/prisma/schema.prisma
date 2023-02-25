@@ -20,7 +20,7 @@ model User {
 
 model Todo {
   id          Int    @id @default(autoincrement())
-  title       String @unique
+  title       String
   description String
   complete    Boolean @default(false)
   user        User   @relation(fields: [userId], references: [id])
